@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1103.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <BorderPane prefHeight="588.0" prefWidth="989.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <SplitPane dividerPositions="0.5329280648429585" prefHeight="559.0" prefWidth="470.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TabPane prefHeight="586.0" prefWidth="519.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab text="AES">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="524.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="AES_key_label" text="Key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="AES_key_input" prefHeight="6.0" prefWidth="174.0" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                              <buttons>
+                                                                  <Button fx:id="AES_key_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="AES_key_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                                  <Button fx:id="AES_key_generate" layoutX="30.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#generateAESKey" prefHeight="6.0" prefWidth="50.0" text="Generate" />
+                                                              </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="AES_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="AES_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="AES_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="AES_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="AES_outputFile_label" text="Output file: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="AES_outputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="AES_outputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="AES_outputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="44.0" prefWidth="502.0">
+                                                         <center>
+                                                            <GridPane BorderPane.alignment="CENTER">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <RadioButton fx:id="AES_encrypt" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" selected="true" text="Encript" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                           <toggleGroup>
+                                                                              <ToggleGroup fx:id="AES_encript_decript" />
+                                                                           </toggleGroup>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane GridPane.columnIndex="1">
+                                                                     <children>
+                                                                        <RadioButton fx:id="AES_decrypt" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" text="Decript" toggleGroup="$AES_encript_decript" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <top>
+                                                            <Button fx:id="AES_run" mnemonicParsing="false" onAction="#run" prefHeight="90.0" prefWidth="259.0" text="Run encription/decription" BorderPane.alignment="CENTER" />
+                                                         </top>
+                                                         <padding>
+                                                            <Insets top="50.0" />
+                                                         </padding>
+                                                         <bottom>
+                                                            <ProgressIndicator fx:id="AES_progress_indicator" progress="0.0" BorderPane.alignment="CENTER" />
+                                                         </bottom>
+                                                      </BorderPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="RSA">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="524.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane prefHeight="37.0" prefWidth="502.0">
+                                                         <left>
+                                                            <Label fx:id="RSA_pubKey_label" text="Public key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="RSA_pubKey_input" prefHeight="6.0" prefWidth="174.0" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="RSA_pubKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="RSA_pubKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                           <left>
+                                                               <Label fx:id="RSA_secKey_label" text="Private key:" BorderPane.alignment="CENTER">
+                                                                   <BorderPane.margin>
+                                                                       <Insets left="10.0" right="10.0" />
+                                                                   </BorderPane.margin>
+                                                               </Label>
+                                                           </left>
+                                                           <center>
+                                                               <TextField fx:id="RSA_secKey_input" prefHeight="6.0" prefWidth="174.0" BorderPane.alignment="CENTER" />
+                                                           </center>
+                                                           <right>
+                                                               <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                                   <buttons>
+                                                                       <Button fx:id="RSA_secKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                           <padding>
+                                                                               <Insets left="5.0" right="5.0" />
+                                                                           </padding>
+                                                                       </Button>
+                                                                       <Button fx:id="RSA_secKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                                   </buttons>
+                                                                   <BorderPane.margin>
+                                                                       <Insets />
+                                                                   </BorderPane.margin>
+                                                               </ButtonBar>
+                                                           </right>
+                                                           <VBox.margin>
+                                                               <Insets />
+                                                           </VBox.margin>
+                                                       </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="RSA_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="RSA_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="RSA_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="RSA_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <top>
+                                                            <BorderPane prefHeight="52.0" prefWidth="502.0" BorderPane.alignment="CENTER">
+                                                               <center>
+                                                                  <Button fx:id="RSA_key_generator" mnemonicParsing="false" onAction="#generateRSAKeys" prefHeight="35.0" prefWidth="147.0" text="Generate both keys" BorderPane.alignment="CENTER" />
+                                                               </center>
+                                                            </BorderPane>
+                                                         </top>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="RSA_outputFile_label" text="Output file: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="RSA_outputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="RSA_outputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="RSA_outputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="44.0" prefWidth="502.0">
+                                                         <center>
+                                                            <GridPane BorderPane.alignment="CENTER">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <RadioButton fx:id="RSA_encrypt" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" selected="true" text="Encript" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                           <toggleGroup>
+                                                                              <ToggleGroup fx:id="RSA_encript_decript" />
+                                                                           </toggleGroup>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane GridPane.columnIndex="1">
+                                                                     <children>
+                                                                        <RadioButton fx:id="RSA_decrypt" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" text="Decript" toggleGroup="$RSA_encript_decript" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <top>
+                                                            <Button fx:id="RSA_run" mnemonicParsing="false" onAction="#run" prefHeight="90.0" prefWidth="259.0" text="Run encription/decription" BorderPane.alignment="CENTER" />
+                                                         </top>
+                                                         <padding>
+                                                            <Insets top="50.0" />
+                                                         </padding>
+                                                         <bottom>
+                                                            <ProgressIndicator fx:id="RSA_progress_indicator" progress="0.0" BorderPane.alignment="CENTER" />
+                                                         </bottom>
+                                                      </BorderPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content></Tab>
+                                    <Tab text="SHA1">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="524.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="SHA1_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="SHA1_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="SHA1_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="SHA1_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="SHA1_outputFile_label" text="Output file: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="SHA1_outputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="SHA1_outputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="SHA1_outputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="44.0" prefWidth="502.0">
+                                                         <center>
+                                                            <GridPane BorderPane.alignment="CENTER">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <RadioButton fx:id="SHA1_default" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" selected="true" text="Default" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                           <toggleGroup>
+                                                                              <ToggleGroup fx:id="SHA1_version" />
+                                                                           </toggleGroup>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane GridPane.columnIndex="1">
+                                                                     <children>
+                                                                        <RadioButton fx:id="SHA1_mine" mnemonicParsing="false" onAction="#modeChange" prefHeight="44.0" prefWidth="251.0" text="MyImplementation" toggleGroup="$SHA1_version" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <padding>
+                                                                              <Insets left="50.0" right="50.0" />
+                                                                           </padding>
+                                                                        </RadioButton>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </GridPane>
+                                                         </center>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                         <top>
+                                                            <Button fx:id="SHA1_run" mnemonicParsing="false" onAction="#run" prefHeight="90.0" prefWidth="259.0" text="Run hashing algorithm" BorderPane.alignment="CENTER" />
+                                                         </top>
+                                                         <padding>
+                                                            <Insets top="50.0" />
+                                                         </padding>
+                                                         <bottom>
+                                                            <ProgressIndicator fx:id="SHA1_progress_indicator" progress="0.0" BorderPane.alignment="CENTER" />
+                                                         </bottom>
+                                                      </BorderPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Digital Envelope">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="623.0" prefWidth="583.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DE_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_publicKey_label" text="Public key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_publicKey_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_publicKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DE_publicKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_envelope_label" text="Digital envelope:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_envelope_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_envelope_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DE_envelope_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DE1_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Generate digital envelope" />
+                                                            <ProgressIndicator fx:id="DE1_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </GridPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_privateKey_label" text="Private key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_privateKey_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_privateKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DE_privateKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_outputFile_label" text="Output file: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_outputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_outputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DE_outputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DE2_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Open digital envelope" />
+                                                            <ProgressIndicator fx:id="DE2_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children></AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Digital Signature">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="623.0" prefWidth="583.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DS_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DS_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DS_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DS_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DS_privateKey_label" text="Private key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DS_privateKey_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DS_privateKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DS_privateKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DE_signature_label" text="Digital signature:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DE_signature_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DE_signature_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DS_signature_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DS1_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Generate digital signature" />
+                                                            <ProgressIndicator fx:id="DS1_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </GridPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DS_publicKey_label" text="Public key: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DS_publicKey_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DS_publicKey_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DS_publicKey_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DS2_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Verify digital signature" />
+                                                            <ProgressIndicator fx:id="DS2_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Digital Stamp">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="623.0" prefWidth="583.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_inputFile_label" text="Input file:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_inputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_inputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_inputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                         <VBox.margin>
+                                                            <Insets top="25.0" />
+                                                         </VBox.margin>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="20.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_publicKeyR_label" text="Public key (reciever): " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_publicKeyR_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_publicKeyR_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_publicKeyR_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_privateKeyS_label" text="Private key (sender): " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_privateKeyS_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_privateKeyS_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_privateKeyS_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_envelope_label" text="Digital envelope:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_envelope_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_envelope_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_envelope_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="20.0" layoutY="185.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_signature_label" text="Digital signature:" BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_signature_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_signature_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_signature_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DST1_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Generate digital stamp" />
+                                                            <ProgressIndicator fx:id="DST1_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </GridPane>
+                                                      <BorderPane layoutX="20.0" layoutY="135.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_publicKeyS_label" text="Public key (sender): " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_publicKeyS_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_publicKeyS_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_publicKeyS_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane layoutX="20.0" layoutY="85.0" prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_privateKeyR_label" text="Private key (reciever): " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_privateKeyR_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_privateKeyR_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_privateKeyR_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <BorderPane prefHeight="50.0" prefWidth="50.0">
+                                                         <left>
+                                                            <Label fx:id="DST_outputFile_label" text="Output file: " BorderPane.alignment="CENTER">
+                                                               <BorderPane.margin>
+                                                                  <Insets left="10.0" right="10.0" />
+                                                               </BorderPane.margin>
+                                                            </Label>
+                                                         </left>
+                                                         <center>
+                                                            <TextField fx:id="DST_outputFile_input" editable="false" BorderPane.alignment="CENTER" />
+                                                         </center>
+                                                         <right>
+                                                            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                               <buttons>
+                                                                  <Button fx:id="DST_outputFile_select" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#selectFile" prefHeight="6.0" prefWidth="50.0" text="Select">
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                     </padding>
+                                                                  </Button>
+                                                                  <Button fx:id="DST_outputFile_edit" layoutX="125.0" layoutY="50.0" maxHeight="25.0" maxWidth="85.0" minHeight="6.0" minWidth="15.0" mnemonicParsing="false" onAction="#editFile" prefHeight="6.0" prefWidth="50.0" text="Edit" />
+                                                               </buttons>
+                                                               <BorderPane.margin>
+                                                                  <Insets />
+                                                               </BorderPane.margin>
+                                                            </ButtonBar>
+                                                         </right>
+                                                      </BorderPane>
+                                                      <GridPane prefHeight="45.0" prefWidth="503.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Button fx:id="DST2_run" mnemonicParsing="false" onAction="#runAdvanced" prefHeight="90.0" prefWidth="259.0" text="Open digital stamp" />
+                                                            <ProgressIndicator fx:id="DST2_progress_indicator" prefHeight="45.0" prefWidth="252.0" progress="0.0" GridPane.columnIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <BorderPane prefHeight="597.0" prefWidth="470.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <AnchorPane>
+                                       <children>
+                                          <TextArea fx:id="textEditor" prefHeight="517.0" prefWidth="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                                 <bottom>
+                                    <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <buttons>
+                                          <Button fx:id="editorSave" mnemonicParsing="false" onAction="#editorSaveChanges" text="Save" />
+                                          <Button fx:id="editorDiscard" mnemonicParsing="false" onAction="#editorDiscardChanges" text="Discard" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

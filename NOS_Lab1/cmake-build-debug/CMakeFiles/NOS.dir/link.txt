@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/NOS.dir/Board.cpp.o CMakeFiles/NOS.dir/mirela_main.cpp.o  -o NOS 

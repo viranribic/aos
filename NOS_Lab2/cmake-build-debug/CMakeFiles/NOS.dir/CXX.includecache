@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vribic/CLionProjects/NOS_Lab2/Board.cpp
+Board.h
+/home/vribic/CLionProjects/NOS_Lab2/Board.h
+
+/home/vribic/CLionProjects/NOS_Lab2/Board.h
+iostream
+-
+assert.h
+-
+
+/home/vribic/CLionProjects/NOS_Lab2/main.cpp
+iostream
+-
+unistd.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+memory.h
+-
+wait.h
+-
+Board.h
+/home/vribic/CLionProjects/NOS_Lab2/Board.h
+

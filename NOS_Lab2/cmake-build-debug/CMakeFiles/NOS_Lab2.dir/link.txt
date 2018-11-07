@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/NOS_Lab2.dir/main.cpp.o  -o NOS_Lab2 

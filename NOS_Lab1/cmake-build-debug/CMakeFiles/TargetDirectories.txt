@@ -1,0 +1,4 @@
+/home/vribic/CLionProjects/NOS_Lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/vribic/CLionProjects/NOS_Lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vribic/CLionProjects/NOS_Lab1/cmake-build-debug/CMakeFiles/NOS.dir
+/home/vribic/CLionProjects/NOS_Lab1/cmake-build-debug/CMakeFiles/NOS_GAME.dir
